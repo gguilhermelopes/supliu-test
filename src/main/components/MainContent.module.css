@@ -1,0 +1,67 @@
+.main {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 1rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.inputContainer {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.inputContainer input {
+  border: none;
+  border-radius: 2rem;
+  padding: 0.75rem 1rem;
+  flex: 1;
+}
+
+.inputContainer button {
+  border: none;
+  border-radius: 2rem;
+  padding: 0.75rem 3rem;
+  color: #fff;
+  background-color: #387ef2;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.inputContainer button:hover {
+  background-color: #335999;
+}
+
+.album {
+  display: flex;
+  flex-direction: column;
+}
+
+.album h2 {
+  font-weight: bold;
+}
+
+.album table {
+  table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 0 0.75rem;
+}
+
+.album table tr {
+  padding: 1rem;
+}
+
+.album table th,
+td {
+  text-align: left;
+}
+
+.album table th:last-child,
+.album table td:last-child {
+  text-align: right;
+}
