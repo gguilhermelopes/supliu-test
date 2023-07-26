@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC, useState, useEffect } from "react";
 import { IoAddCircle } from "react-icons/io5";
 
 import styles from "./MainContent.module.css";
@@ -16,15 +16,33 @@ interface MainContentProps {
 
 const MainContent: FC<MainContentProps> = ({ data, loading }) => {
   const [input, setInput] = useState("");
+  const [albums, setAlbums] = useState(data);
   const [albumModal, setAlbumModal] = useState(false);
   const [albumIndex, setAlbumIndex] = useState(1);
   const [albumId, setAlbumId] = useState(0);
   const [addModal, setAddModal] = useState(false);
 
+  useEffect(() => {
+    setAlbums(data);
+  }, [data]);
+
   const handleAlbumClick = (index: number, id: number) => {
     setAlbumModal(true);
     setAlbumIndex(index);
     setAlbumId(id);
+  };
+
+  const handleSearchClick = () => {
+    const filteredAlbums = data
+      ?.map((album) => ({
+        ...album,
+        tracks: album.tracks.filter((track) =>
+          track.title.toLowerCase().includes(input.toLowerCase())
+        ),
+      }))
+      .filter((album) => album.tracks.length > 0);
+
+    if (filteredAlbums) setAlbums(filteredAlbums);
   };
 
   return (
@@ -56,14 +74,15 @@ const MainContent: FC<MainContentProps> = ({ data, loading }) => {
               id="search"
               placeholder="Digite o nome de uma música 🎵"
             />
+            <button onClick={handleSearchClick}>Procurar</button>
           </div>
         </form>
 
         <div className={styles.content}>
           {loading && !data && <Loader />}
 
-          {data &&
-            data.map((album, index) => (
+          {albums &&
+            albums.map((album, index) => (
               <div key={album.id} className={styles.album}>
                 <div onClick={() => handleAlbumClick(index, album.id)}>
                   <h2>
@@ -79,21 +98,23 @@ const MainContent: FC<MainContentProps> = ({ data, loading }) => {
                     </tr>
                   </thead>
                   <tbody>
-                    {album.tracks
-                      .filter((music) =>
-                        music.title.toLowerCase().includes(input.toLowerCase())
-                      )
-                      .map((track) => (
-                        <tr key={track.id}>
-                          <td>{track.number}</td>
-                          <td>{track.title}</td>
-                          <td>{formatDuration(track.duration)}</td>
-                        </tr>
-                      ))}
+                    {album.tracks.map((track) => (
+                      <tr key={track.id}>
+                        <td>{track.number}</td>
+                        <td>{track.title}</td>
+                        <td>{formatDuration(track.duration)}</td>
+                      </tr>
+                    ))}
                   </tbody>
                 </table>
               </div>
             ))}
+
+          {albums?.length === 0 && (
+            <p className={styles.fallbackText}>
+              Sem resultados encontrados, tente outros termos.
+            </p>
+          )}
         </div>
         <button
           onClick={() => setAddModal(true)}

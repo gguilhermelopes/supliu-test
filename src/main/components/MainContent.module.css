@@ -6,6 +6,10 @@
   flex-direction: column;
 }
 
+.content {
+  margin-bottom: 2rem;
+}
+
 .form {
   display: flex;
   flex-direction: column;
@@ -78,6 +82,11 @@ td {
 .album table th:last-child,
 .album table td:last-child {
   text-align: right;
+}
+
+.fallbackText {
+  font-weight: bold;
+  font-size: 1.25rem;
 }
 
 .addAlbumButton {
