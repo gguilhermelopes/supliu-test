@@ -12,4 +12,154 @@
 
 .modal {
   background-color: #fff;
+  padding: 2.5rem;
+  border-radius: 0.25rem;
+  width: 27.5rem;
+  min-height: 20vh;
+}
+
+.title {
+  text-align: center;
+  font-size: 1.375rem;
+  font-weight: bold;
+}
+
+.tracks {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.tracks li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #eee;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+}
+
+.tracks li button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  color: #c41e3a;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.tracks li button:hover {
+  transform: scale(1.1);
+}
+
+.dropdown h2 {
+  font-size: 1.125rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  width: fit-content;
+  margin-top: 2rem;
+  position: relative;
+  transition: 0.3s;
+  margin-bottom: 1rem;
+}
+
+.dropdown h2::after {
+  content: "";
+  display: none;
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  background-color: #ddd;
+  border-radius: 0.15rem;
+  bottom: -4px;
+}
+
+.dropdown h2:hover::after {
+  display: block;
+}
+
+.form {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form input {
+  border: none;
+  background: #eee;
+  padding: 0.5rem 1rem;
+  border-radius: 0.125rem;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.form button {
+  margin-top: 0.5rem;
+  max-width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  font-family: inherit;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: 0.3s;
+  background: #fff;
+  border: 1px solid #eee;
+}
+.form button:hover {
+  background: #666;
+  color: #fff;
+  border-color: transparent;
+}
+
+.form button:disabled {
+  cursor: progress;
+  opacity: 0.5;
+}
+
+.deleteAlbumButton {
+  margin-top: auto;
+  margin-left: auto;
+  max-width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  font-family: inherit;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: 0.3s;
+  background: #fafafa;
+  color: #c41e3a;
+}
+
+.deleteAlbumButton:hover {
+  background: #c41e3a;
+  color: #fff;
+}
+
+.error {
+  color: #ff6347;
+  margin-top: 1rem;
+  font-size: 0.875rem;
+}
+
+.success {
+  color: #7ba05b;
+  margin-top: 1rem;
+  font-size: 0.875rem;
 }

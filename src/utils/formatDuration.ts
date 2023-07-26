@@ -5,3 +5,9 @@ export const formatDuration = (seconds: number) => {
   const formattedSeconds = String(remainingSeconds).padStart(2, "0");
   return `${formattedMinutes}:${formattedSeconds}`;
 };
+
+export const minutesToSeconds = (time: string) => {
+  const [min, sec] = time.split(":").map(Number);
+  const totalSec = min * 60 + sec;
+  return totalSec;
+};
