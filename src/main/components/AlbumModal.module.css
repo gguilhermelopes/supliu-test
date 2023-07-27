@@ -16,6 +16,8 @@
   border-radius: 0.25rem;
   width: 27.5rem;
   min-height: 20vh;
+  transform: scale(0.625);
+  animation: showUp 0.3s forwards;
 }
 
 .title {
@@ -53,6 +55,12 @@
 
 .tracks li button:hover {
   transform: scale(1.1);
+}
+
+.dropdownContainer form {
+  transform: translateY(-1rem);
+  opacity: 0;
+  animation: showUp 0.3s forwards;
 }
 
 .dropdown h2 {
@@ -175,5 +183,12 @@
 
   .dropdown h2 {
     font-size: 1rem;
+  }
+}
+
+@keyframes showUp {
+  to {
+    transform: initial;
+    opacity: initial;
   }
 }

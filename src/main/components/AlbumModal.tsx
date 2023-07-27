@@ -111,50 +111,52 @@ const AlbumModal: FC<AlbumModalProps> = ({
                 )}
               </h2>
               {isDropdownOpen && (
-                <form
-                  className={styles.form}
-                  onSubmit={(event) => event.preventDefault()}
-                >
-                  <label>Número da música</label>
-                  <input
-                    value={number}
-                    onChange={(event) => setNumber(event.target.value)}
-                    type="number"
-                    name="number"
-                    id="number"
-                    placeholder="1"
-                  />
-                  <label>Título</label>
-                  <input
-                    value={title}
-                    onChange={(event) => setTitle(event.target.value)}
-                    type="text"
-                    name="title"
-                    id="title"
-                    placeholder="Alma de Boêmio"
-                  />
-                  <label>Duração</label>
-                  <input
-                    value={duration}
-                    onChange={(event) => setDuration(event.target.value)}
-                    name="duration"
-                    id="duration"
-                    placeholder="03:15"
-                  />
-                  <button disabled={loading} onClick={handleAddTrack}>
-                    Adicionar música
-                  </button>
-                  {error && (
-                    <p className={styles.error}>
-                      Erro ao adicionar música. Verifique suas informações.
-                    </p>
-                  )}
-                  {success && (
-                    <p className={styles.success}>
-                      Música adicionada com sucesso!
-                    </p>
-                  )}
-                </form>
+                <div className={styles.dropdownContainer}>
+                  <form
+                    className={styles.form}
+                    onSubmit={(event) => event.preventDefault()}
+                  >
+                    <label>Número da música</label>
+                    <input
+                      value={number}
+                      onChange={(event) => setNumber(event.target.value)}
+                      type="number"
+                      name="number"
+                      id="number"
+                      placeholder="1"
+                    />
+                    <label>Título</label>
+                    <input
+                      value={title}
+                      onChange={(event) => setTitle(event.target.value)}
+                      type="text"
+                      name="title"
+                      id="title"
+                      placeholder="Alma de Boêmio"
+                    />
+                    <label>Duração</label>
+                    <input
+                      value={duration}
+                      onChange={(event) => setDuration(event.target.value)}
+                      name="duration"
+                      id="duration"
+                      placeholder="03:15"
+                    />
+                    <button disabled={loading} onClick={handleAddTrack}>
+                      Adicionar música
+                    </button>
+                    {error && (
+                      <p className={styles.error}>
+                        Erro ao adicionar música. Verifique suas informações.
+                      </p>
+                    )}
+                    {success && (
+                      <p className={styles.success}>
+                        Música adicionada com sucesso!
+                      </p>
+                    )}
+                  </form>
+                </div>
               )}
             </div>
             <button

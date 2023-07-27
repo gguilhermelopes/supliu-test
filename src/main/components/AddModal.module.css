@@ -16,6 +16,8 @@
   border-radius: 0.25rem;
   width: 27.5rem;
   min-height: 20vh;
+  transform: scale(0.625);
+  animation: showUp 0.3s forwards;
 }
 
 .title {
@@ -82,5 +84,11 @@
 @media (max-width: 580px) {
   .modal {
     margin: 0 1.25rem;
+  }
+}
+
+@keyframes showUp {
+  to {
+    transform: initial;
   }
 }
