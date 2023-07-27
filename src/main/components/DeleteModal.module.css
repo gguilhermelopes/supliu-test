@@ -81,6 +81,11 @@
   color: #fff;
 }
 
+.buttonsContainer .deleteAlbumButton:disabled {
+  opacity: 0.5;
+  cursor: progress;
+}
+
 .error {
   color: #ff6347;
   font-size: 0.875rem;
