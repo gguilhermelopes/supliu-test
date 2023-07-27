@@ -4,3 +4,10 @@
   border-radius: 0.25rem;
   overflow: hidden;
 }
+
+@media (max-width: 730px) {
+  .main {
+    padding: 1rem;
+    width: 90%;
+  }
+}

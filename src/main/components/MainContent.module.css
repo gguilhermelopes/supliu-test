@@ -126,3 +126,9 @@ td {
   background: #666;
   color: #fff;
 }
+
+@media (max-width: 580px) {
+  .inputContainer {
+    flex-direction: column;
+  }
+}
