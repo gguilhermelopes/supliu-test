@@ -1,27 +1,47 @@
-# React + TypeScript + Vite
+# Discografia Tião Carreiro & Pardinho
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![GitHub repo size](https://img.shields.io/github/repo-size/gguilhermelopes/supliu-test?style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/gguilhermelopes/supliu-test?style=for-the-badge)
 
-Currently, two official plugins are available:
+<p align="center">
+<img src="./docs/readme-img.png" alt="preview img">
+</p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+> Projeto com a discografia da dupla Tião Carreiro & Pardinho
 
-## Expanding the ESLint configuration
+### Ajustes e melhorias
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Projeto concluído!
 
-- Configure the top-level `parserOptions` property like this:
+- [x] Desenvolvimento de todo o projeto em SPA utilizando React
+- [x] Consumo de REST API
+- [x] Páginas responsivas
+- [x] Criação e exclusão de músicas e álbuns
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+## 💻 Pré-requisitos
+
+Antes de começar, verifique se você atendeu aos seguintes requisitos:
+
+* Você instalou a versão mais recente de `Node.js` e `npm`.
+
+## 🚀 Instalando Discografia Tião Carreiro & Pardinho
+
+Para instalar o Discografia Tião Carreiro & Pardinho , siga estas etapas:
+
+* Clone esse repositório com `git clone https://github.com/gguilhermelopes/supliu-test`
+* Entre na pasta com `cd supliu-test`
+* Instale as dependências com `npm install`
+* É necessário um arquivo de váriaveis de ambiente (.env) como no exemplo abaixo
+
+```
+VITE_BASE_API_URL = URL da API
+
+VITE_API_TOKEN = Token para utilização da API
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+
+## ☕ Usando Discografia Tião Carreiro & Pardinho
+
+Para usar Discografia Tião Carreiro & Pardinho, siga estas etapas:
+
+* Certifique-se de que todas as dependências foram instaladas, que o arquivo .env esteja configurado corretamente e que esteja na pasta do projeto. Utilize `npm run dev` e veja em qual porta do seu ambiente local ele foi executado.
