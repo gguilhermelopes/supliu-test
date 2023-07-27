@@ -1,8 +1,8 @@
 import axios from "axios";
 
-const baseURL = "https://tiao.supliu.com.br/api/";
+const baseURL = import.meta.env.VITE_BASE_API_URL;
 
-const token = "guilhermelopes275@gmail.com";
+const token = import.meta.env.VITE_API_TOKEN;
 
 const axiosInstance = axios.create({
   baseURL,
