@@ -70,6 +70,21 @@
   border-spacing: 0 0.75rem;
 }
 
+th:nth-child(1),
+td:nth-child(1) {
+  width: 10%;
+}
+
+th:nth-child(2),
+td:nth-child(2) {
+  width: 70%;
+}
+
+th:nth-child(3),
+td:nth-child(3) {
+  width: 20%;
+}
+
 .album table tr {
   padding: 1rem;
 }
